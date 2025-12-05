@@ -1,4 +1,4 @@
-# OCR-MediaPipe Face Mesh
+# OCR-MediaPipe Face Mesh (AI without ML)
 
 ## Project Overview
 
@@ -10,6 +10,8 @@ The project allows users to:
 - Select a Region of Interest (RoI) from the captured image.
 - Extract text from the selected area using Tesseract OCR.
 - Visualize facial landmarks, including eyes, lips, nose, nostrils, and iris using MediaPipe Face Mesh.
+
+> Make sure you're using **Python v3.12.7** or older versions, which are compatible with MediaPipe.
 
 ## Features
 
@@ -23,6 +25,7 @@ The project allows users to:
 ### MediaPipe Face Mesh
 
 - Real-time facial landmark detection using webcam feed.
+
 - Highlights facial features in different colors:
 
   - Full face mesh (magenta)
@@ -36,7 +39,7 @@ The project allows users to:
 
 ### Technologies Used
 
-- **Python 3.x**
+- **Python 3.12.7**
 - **OpenCV**: Capturing webcam feed and image preprocessing.
 - **MediaPipe**: Real-time facial landmark detection and visualization.
 - **Tesseract OCR**: Extracting text from images.
@@ -47,24 +50,34 @@ The project allows users to:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/OCR-MediaPipe-face-mesh.git
-cd OCR-MediaPipe-face-mesh
+git clone https://github.com/Mchiir/Webcam-OCR-FaceMesh.git
+cd Webcam-OCR-FaceMesh
 ```
 
-2. Install the required dependencies:
+2. Create and activate a virtual environment with Python 3.12.7:
 
 ```bash
-pip install opencv-python mediapipe pytesseract numpy
+# Windows
+python -m venv .venv
+.venv\Scripts\activate
 ```
 
-3. Make sure Tesseract OCR is installed on your system and its path is properly set.
+3. Install the required dependencies:
+
+```bash
+pip install --upgrade pip
+pip install --upgrade --no-deps --force-reinstall opencv-python mediapipe pytesseract numpy protobuf attrs matplotlib
+```
+
+4. Make sure Tesseract OCR is installed on your system and its path is properly set.
 
 ## Usage
 
 1. Run the main script:
 
 ```bash
-python main.py
+(.venv) cd Webcam-OCR-FaceMesh
+(.venv) python main.py
 ```
 
 2. Follow on-screen instructions:
